@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainmenuComponent } from './mainmenu.component';
+import { ContactsComponent } from './contacts.component';
 
-describe('MainmenuComponent', () => {
-  let component: MainmenuComponent;
-  let fixture: ComponentFixture<MainmenuComponent>;
+describe('ContactsComponent', () => {
+  let component: ContactsComponent;
+  let fixture: ComponentFixture<ContactsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MainmenuComponent]
+      declarations: [ContactsComponent]
     });
-    fixture = TestBed.createComponent(MainmenuComponent);
+    fixture = TestBed.createComponent(ContactsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
