@@ -1,1 +1,50 @@
-<p>contacts works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flagger</title>
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a [routerLink]="['']">Home</a></li>
+            <li><a [routerLink]="['contacts']">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="contacts-container">
+    <h1>Contact us!</h1>
+    <form class="contact-form" (submit)="submitContactForm()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="contact.name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="contact.email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" [(ngModel)]="contact.message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send</button>
+    </form>
+</div>
+
+<div class="contact-list">
+    <h2>Můj kontakt</h2>
+    <ul class="contact-details">
+        <li class="contact-item">
+            <h3>Václav Šrubař</h3>
+            <p>Email: vaclavsr@post.cz</p>
+            <p>Tel: +420 732 420 069</p>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

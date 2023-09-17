@@ -4,18 +4,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlagquizComponent } from './components/flagquiz/flagquiz.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
-import { SettingsComponent } from './components/settings/settings.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     FlagquizComponent,
     ContactsComponent,
-    SettingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
