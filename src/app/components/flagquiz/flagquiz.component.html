@@ -25,12 +25,12 @@
         <section class="difficulty">
             <h2>Select Difficulty:</h2>
             <div class="difficulty-buttons">
-                <button class="easy">Easy</button>
-                <button class="medium">Medium</button>
-                <button class="hard">Hard</button>
-                <button class="expert">Expert</button>
-                <button class="extreme">Extreme</button>
-            </div>
+                <button class="easy" (click)="selectDifficulty('easy')">Easy</button>
+                <button class="medium" (click)="selectDifficulty('medium')">Medium</button>
+                <button class="hard" (click)="selectDifficulty('hard')">Hard</button>
+                <button class="expert" (click)="selectDifficulty('expert')">Expert</button>
+                <button class="extreme" (click)="selectDifficulty('extreme')">Extreme</button>
+              </div>                            
         </section>
     </main>
 </body>

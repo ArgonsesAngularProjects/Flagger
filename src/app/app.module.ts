@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { FlagquizComponent } from './components/flagquiz/flagquiz.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { FormsModule } from '@angular/forms';
+import { QuizgameComponent } from './components/quizgame/quizgame.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FlagquizComponent,
     ContactsComponent,
+    QuizgameComponent,
   ],
   imports: [
     BrowserModule,

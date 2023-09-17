@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-flagquiz',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./flagquiz.component.css']
 })
 export class FlagquizComponent {
+  constructor(private router: Router) {}
 
+  selectDifficulty(difficulty: string) {
+    this.router.navigate(['/quizgame', difficulty]);
+  }
 }

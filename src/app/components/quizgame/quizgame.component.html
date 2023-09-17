@@ -1,0 +1,6 @@
+<div class="flag-container">
+    <div *ngFor="let flag of flags" class="flag-item">
+      <img [src]="flag.image" alt="{{ flag.name }}" class="flag-image">
+      <p class="flag-name">{{ flag.name }}</p>
+    </div>
+  </div>
