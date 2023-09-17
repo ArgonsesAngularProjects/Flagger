@@ -1,6 +1,25 @@
-<div class="flag-container">
-    <div *ngFor="let flag of flags" class="flag-item">
-      <img [src]="flag.image" alt="{{ flag.name }}" class="flag-image">
-      <p class="flag-name">{{ flag.name }}</p>
+<h1>Quiz</h1>
+
+<body>
+  <div *ngIf="!showResults">
+    <div class="timer-container">
+      <div class="timer-bar" [style.width]="(timeLimit / 20) * 100 + '%'"></div>
     </div>
+    <div *ngIf="flags.length > 0 && currentFlagIndex < flags.length">
+      <h2>Question {{ currentFlagIndex + 1 }}</h2>
+      <img [src]="flags[currentFlagIndex].image" alt="{{ flags[currentFlagIndex].name }}" class="quiz-flag">
+      <div class="options">
+        <div *ngFor="let option of shuffledOptions[currentFlagIndex]; let j = index">
+          <button (click)="checkAnswer(option, flags[currentFlagIndex])" class="option-button">{{ option.name }}</button>
+        </div>
+      </div>
+    </div>
+    <button *ngIf="currentFlagIndex === flags.length - 1" (click)="finishQuiz()" class="finish-button">Finish</button>
   </div>
+</body>
+
+<div *ngIf="showResults">
+  <h2>Your Results</h2>
+  <p>You got {{ correctAnswers }} out of {{ flags.length }} correct!</p>
+  <button (click)="finishQuiz()" class="finish-button">Finish</button>
+</div>
